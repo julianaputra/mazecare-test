@@ -3,37 +3,37 @@ const navItems = ref([
     {
         id: 1,
         name: 'Home',
-        to: { name: 'index' },
+        to: '/',
         icon: 'ph:house-duotone'
     },
     {
         id: 2,
         name: 'Palette',
-        to: { name: 'index' },
+        to: '/about',
         icon: 'ph:palette-duotone'
     },
     {
         id: 3,
         name: 'Folder',
-        to: { name: 'index' },
+        to: '/about',
         icon: 'ph:folder-duotone'
     },
     {
         id: 4,
         name: 'Calendar',
-        to: { name: 'index' },
+        to: '/about',
         icon: 'ph:calendar-duotone'
     },
     {
         id: 5,
         name: 'File',
-        to: { name: 'index' },
+        to: '/about',
         icon: 'ph:file-duotone'
     },
     {
         id: 6,
         name: 'Chart',
-        to: { name: 'index' },
+        to: '/about',
         icon: 'ph:chart-bar-duotone'
     },
 ])
@@ -68,6 +68,9 @@ const navItems = ref([
     @apply bg-gray-50 border-e border-gray-200;
     display: grid;
     grid-template-rows: auto 1fr;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .default-sidebar__logo {
@@ -88,9 +91,12 @@ const navItems = ref([
     display: flex;
     transition: all .2s ease;
 }
+.default-sidebar__nav-item.router-link-active {
+    @apply bg-rose-500 text-white;
+}
 
 .default-sidebar__nav-item:hover {
-    @apply bg-red-500;
+    @apply bg-rose-400 text-white;
 }
 
 .default-sidebar__nav-icon {

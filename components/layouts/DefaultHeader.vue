@@ -66,16 +66,14 @@ const country = ref(countries[0])
 
 <style scoped>
 .default-header {
-    @apply border-b border-gray-200 bg-gray-50 px-6;
+    @apply border-b border-gray-200 bg-gray-50 px-6 flex items-center justify-end;
     height: 62px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    position: sticky;
+    top: 0;
 }
 
 .default-header__actions {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
     gap: 32px;
 }
 </style>
