@@ -4,7 +4,7 @@ import DefaultHeader from '~/components/layouts/DefaultHeader.vue';
 </script>
 
 <template>
-    <div>
+    <div class="default-layout">
         <DefaultSidebar />
         <div>
             <DefaultHeader />
@@ -13,4 +13,12 @@ import DefaultHeader from '~/components/layouts/DefaultHeader.vue';
             </main>
         </div>
     </div>
-  </template>
+</template>
+
+  <style scoped>
+.default-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    min-height: 100vh;
+}
+</style>
