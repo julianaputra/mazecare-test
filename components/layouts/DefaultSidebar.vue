@@ -4,7 +4,7 @@ const navItems = ref([
         id: 1,
         name: 'Home',
         to: { name: 'index' },
-        icon: 'ph:house-duotone'   
+        icon: 'ph:house-duotone'
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const navItems = ref([
         id: 4,
         name: 'Calendar',
         to: { name: 'index' },
-        icon: 'ph:calendar-duotone' 
+        icon: 'ph:calendar-duotone'
     },
     {
         id: 5,
@@ -34,7 +34,7 @@ const navItems = ref([
         id: 6,
         name: 'Chart',
         to: { name: 'index' },
-        icon: 'ph:chart-bar-duotone'  
+        icon: 'ph:chart-bar-duotone'
     },
 ])
 </script>
@@ -46,7 +46,8 @@ const navItems = ref([
         </div>
         <div class="default-sidebar__wrapper p-3">
             <nav class="default-sidebar__nav">
-                <NuxtLink class="default-sidebar__nav-item" v-for="navItem in navItems" :key="navItem.id" :to="navItem.to">
+                <NuxtLink class="default-sidebar__nav-item" v-for="navItem in navItems" :key="navItem.id"
+                    :to="navItem.to">
                     <UIcon :name="navItem.icon" class="default-sidebar__nav-icon" />
                 </NuxtLink>
             </nav>
@@ -64,9 +65,9 @@ const navItems = ref([
 
 <style scoped>
 .default-sidebar {
- @apply bg-gray-50 border-e border-gray-200;
- display: grid;
- grid-template-rows: auto 1fr;
+    @apply bg-gray-50 border-e border-gray-200;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
 
 .default-sidebar__logo {
@@ -87,6 +88,7 @@ const navItems = ref([
     display: flex;
     transition: all .2s ease;
 }
+
 .default-sidebar__nav-item:hover {
     @apply bg-red-500;
 }
@@ -100,6 +102,7 @@ const navItems = ref([
     flex-direction: column;
     gap: 12px;
 }
+
 .default-sidebar__actions {
     display: flex;
     flex-direction: column;
