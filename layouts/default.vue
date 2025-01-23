@@ -8,7 +8,7 @@ import DefaultHeader from '~/components/layouts/DefaultHeader.vue';
         <DefaultSidebar />
         <div>
             <DefaultHeader />
-            <main class="default-layout__main">
+            <main class="p-4">
                 <slot />
             </main>
         </div>
@@ -17,13 +17,7 @@ import DefaultHeader from '~/components/layouts/DefaultHeader.vue';
 
 <style scoped>
 .default-layout {
-    @apply bg-gray-100;
-    display: grid;
+    @apply bg-gray-100 grid min-h-screen;
     grid-template-columns: auto 1fr;
-    min-height: 100vh;
-}
-
-.default-layout__main {
-    @apply p-4;
 }
 </style>
