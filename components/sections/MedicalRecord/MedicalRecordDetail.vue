@@ -137,8 +137,13 @@ const formGroupUiConfig = {
 
       <UCard class="mb-3" :ui="cardUiConfig">
         <template #header>
-          <h4 class="text-sm font-semibold">Attachments</h4>
-          <p class="text-xs text-gray-400">View and manage record attachment</p>
+          <div class="flex justify-between items-center">
+            <div>
+              <h4 class="text-sm font-semibold">Attachments</h4>
+              <p class="text-xs text-gray-400">View and manage record attachment</p>
+            </div>
+            <UButton icon="ph:plus">Upload File</UButton>
+          </div>
         </template>
         <div class="grid gap-2">
           <UiAttachment v-for="attachment in attachmentList" :key="attachment.id" :data="attachment" />

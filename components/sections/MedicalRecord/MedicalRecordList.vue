@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LabResultItem from './LabResultItem.vue';
+import LabResultItem from '~/components/sections/MedicalRecord/LabResultItem.vue';
 import UiPagination from '~/components/ui/UiPagination.vue';
 
 const links = [

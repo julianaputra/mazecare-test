@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import MeanBloodChart from './MeanBloodChart.vue';
-import MeanBloodList from './MeanBloodList.vue';
+import MeanBloodChart from '~/components/sections/MeanBlood/MeanBloodChart.vue';
+import MeanBloodList from '~/components/sections/MeanBlood/MeanBloodList.vue';
 
 import type { IMeanBlood } from '~/types';
 

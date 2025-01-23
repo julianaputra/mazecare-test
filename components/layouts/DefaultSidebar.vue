@@ -9,31 +9,31 @@ const navItems = ref([
     {
         id: 2,
         name: 'Palette',
-        to: '/about',
+        to: '/palette',
         icon: 'ph:palette-duotone'
     },
     {
         id: 3,
         name: 'Folder',
-        to: '/about',
+        to: '/folder',
         icon: 'ph:folder-duotone'
     },
     {
         id: 4,
         name: 'Calendar',
-        to: '/about',
+        to: '/calendar',
         icon: 'ph:calendar-duotone'
     },
     {
         id: 5,
         name: 'File',
-        to: '/about',
+        to: '/file',
         icon: 'ph:file-duotone'
     },
     {
         id: 6,
         name: 'Chart',
-        to: '/about',
+        to: '/chart',
         icon: 'ph:chart-bar-duotone'
     },
 ])
@@ -65,20 +65,12 @@ const navItems = ref([
 
 <style scoped>
 .default-sidebar {
-    @apply bg-gray-50 border-e border-gray-200;
-    display: grid;
+    @apply bg-gray-50 border-e border-gray-200 grid h-screen sticky top-0;
     grid-template-rows: auto 1fr;
-    height: 100vh;
-    position: sticky;
-    top: 0;
 }
 
 .default-sidebar__logo {
-    @apply border-b border-gray-200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 62px;
+    @apply border-b border-gray-200 flex items-center justify-center h-[62px];
 }
 
 .default-sidebar__wrapper {
@@ -87,10 +79,9 @@ const navItems = ref([
 }
 
 .default-sidebar__nav-item {
-    @apply px-4 py-2 rounded-md;
-    display: flex;
-    transition: all .2s ease;
+    @apply px-4 py-2 rounded-md flex transition-all;
 }
+
 .default-sidebar__nav-item.router-link-active {
     @apply bg-rose-500 text-white;
 }
@@ -104,14 +95,10 @@ const navItems = ref([
 }
 
 .default-sidebar__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    @apply flex flex-col gap-3;
 }
 
 .default-sidebar__actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    @apply flex flex-col gap-3;
 }
 </style>

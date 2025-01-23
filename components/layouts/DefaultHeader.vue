@@ -22,14 +22,14 @@ const items = [
     }]
 ]
 
-const countries = ['en-US', 'fr-FR']
+const locales = ['en-US', 'id-ID']
 
-const country = ref(countries[0])
+const country = ref(locales[0])
 </script>
 
 <template>
-    <header class="default-header">
-        <div class="default-header__actions">
+    <header class="border-b border-gray-200 bg-gray-50 px-6 flex items-center justify-end h-[62px] sticky top-0 z-[49]">
+        <div class="flex items-center gap-8">
             <button class="flex">
                 <UIcon name="ph:magnifying-glass-duotone" class="w-6 h-6" />
             </button>
@@ -37,7 +37,7 @@ const country = ref(countries[0])
                 <UIcon name="ph:sun-duotone" class="w-6 h-6" />
             </button>
 
-            <USelect v-model="country" :options="countries" />
+            <USelect v-model="country" :options="locales" />
 
             <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }"
                 :popper="{ placement: 'bottom-start' }">
@@ -63,18 +63,3 @@ const country = ref(countries[0])
         </div>
     </header>
 </template>
-
-<style scoped>
-.default-header {
-    @apply border-b border-gray-200 bg-gray-50 px-6 flex items-center justify-end;
-    height: 62px;
-    position: sticky;
-    top: 0;
-    z-index: 49;
-}
-
-.default-header__actions {
-    @apply flex items-center;
-    gap: 32px;
-}
-</style>

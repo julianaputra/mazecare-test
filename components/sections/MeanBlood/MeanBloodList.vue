@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IMeanBlood } from '~/types';
-import MeanBloodListItem from './MeanBloodListItem.vue';
+import MeanBloodListItem from '~/components/sections/MeanBlood/MeanBloodListItem.vue';
 import UiPagination from '~/components/ui/UiPagination.vue';
 
 interface IProps {
