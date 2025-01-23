@@ -30,21 +30,11 @@ const endItem = computed(() => Math.min(page.value * itemsPerPage.value, props.t
 </script>
 
 <template>
-    <div class="ui-footer">
-        <div class="ui-footer__info">
+    <div class="flex items-center justify-between">
+        <div class="text-xs flex items-center gap-2">
             <p>Showing {{ startItem }} to {{ endItem }} of {{ total }} entries</p>
             <USelect v-model="itemsPerPage" :options="itemsPerPageOptions" option-attribute="name" size="xs" />
         </div>
-        <UPagination v-model="page" :page-count="itemsPerPage" :total="total" />
+        <UPagination size="xs" v-model="page" :page-count="itemsPerPage" :total="total" />
     </div>
 </template>
-
-<style scoped>
-.ui-footer {
-    @apply flex items-center justify-between;
-}
-
-.ui-footer__info {
-    @apply text-xs flex items-center gap-2;
-}
-</style>

@@ -29,6 +29,10 @@ defineProps<IProps>()
     grid-template-columns: 1fr auto;
     align-items: center;
     cursor: pointer;
+    transition: all .2s ease;
+}
+.item:hover {
+    @apply border-rose-500;
 }
 
 .item__header {

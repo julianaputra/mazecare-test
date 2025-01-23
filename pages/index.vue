@@ -2,7 +2,7 @@
 import PatientInformation from '~/components/sections/patient/PatientInformation.vue';
 import MedicalRecords from '~/components/sections/patient/MedicalRecords.vue';
 import MedicalRecordDetail from '~/components/sections/patient/MedicalRecordDetail.vue';
-import MeanBloodChart from '~/components/sections/patient/MeanBloodChart.vue';
+import MeanBlood from '~/components/sections/patient/MeanBlood.vue';
 
 const isShowResult = ref(false)
 const isShowChart = ref(false)
@@ -17,14 +17,15 @@ const showChart = () => {
 
 <template>
     <PatientInformation />
-
     <MedicalRecords @clickResult="showResult" />
 
-    <USlideover v-model="isShowResult">
-        <MedicalRecordDetail @clickChart="showChart" />
+    <USlideover v-model="isShowResult" :ui="{ wrapper: 'p-3', background: 'rounded-lg', width: 'max-w-[45%]' }" prevent-close >
+        <MedicalRecordDetail @clickChart="showChart" @close="isShowResult = false"  />
     </USlideover>
 
-    <USlideover side="left" v-model="isShowChart">
-        <MeanBloodChart />
+    <USlideover :overlay="false" side="left" v-model="isShowChart" prevent-close :ui="{ wrapper: 'w-[55%] p-3', background: 'rounded-lg', width: 'max-w-[100%]' }">
+        <MeanBlood @close="isShowChart = false" />
     </USlideover>
+
+
 </template>

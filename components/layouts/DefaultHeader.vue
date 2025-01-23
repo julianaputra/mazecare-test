@@ -70,6 +70,7 @@ const country = ref(countries[0])
     height: 62px;
     position: sticky;
     top: 0;
+    z-index: 49;
 }
 
 .default-header__actions {
